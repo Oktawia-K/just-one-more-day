@@ -1,3 +1,3 @@
-# just-one-more-day
-Epicka Gra
+# Just One More Day: The Adventure Game
+Epicka Gra\n
 Jebać Jakusza
