@@ -29,23 +29,22 @@ namespace Just_One_More_day
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.POV = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.OknoWyboru = new System.Windows.Forms.ListBox();
-            this.OknoDialogu = new System.Windows.Forms.RichTextBox();
-            this.Item1 = new System.Windows.Forms.PictureBox();
-            this.Item2 = new System.Windows.Forms.PictureBox();
-            this.Item3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.OknoDialogu = new System.Windows.Forms.RichTextBox();
+            this.OknoWyboru = new System.Windows.Forms.ListBox();
+            this.POV = new System.Windows.Forms.PictureBox();
+            this.Item3 = new System.Windows.Forms.PictureBox();
+            this.Item2 = new System.Windows.Forms.PictureBox();
+            this.Item1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.POV)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Item1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Item2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.POV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -64,16 +63,6 @@ namespace Just_One_More_day
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // POV
-            // 
-            this.POV.Image = ((System.Drawing.Image)(resources.GetObject("POV.Image")));
-            this.POV.Location = new System.Drawing.Point(3, 3);
-            this.POV.Name = "POV";
-            this.POV.Size = new System.Drawing.Size(610, 278);
-            this.POV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.POV.TabIndex = 0;
-            this.POV.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.button2);
@@ -87,6 +76,32 @@ namespace Just_One_More_day
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(610, 136);
             this.panel1.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(512, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "--->";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(431, 94);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "<---";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // OknoDialogu
+            // 
+            this.OknoDialogu.Location = new System.Drawing.Point(132, 3);
+            this.OknoDialogu.Name = "OknoDialogu";
+            this.OknoDialogu.Size = new System.Drawing.Size(283, 136);
+            this.OknoDialogu.TabIndex = 3;
+            this.OknoDialogu.Text = "";
             // 
             // OknoWyboru
             // 
@@ -103,59 +118,43 @@ namespace Just_One_More_day
             this.OknoWyboru.TabIndex = 2;
             this.OknoWyboru.SelectedIndexChanged += new System.EventHandler(this.OknoWyboru_SelectedIndexChanged);
             // 
-            // OknoDialogu
+            // POV
             // 
-            this.OknoDialogu.Location = new System.Drawing.Point(132, 3);
-            this.OknoDialogu.Name = "OknoDialogu";
-            this.OknoDialogu.Size = new System.Drawing.Size(283, 136);
-            this.OknoDialogu.TabIndex = 3;
-            this.OknoDialogu.Text = "";
-            // 
-            // Item1
-            // 
-            this.Item1.Image = ((System.Drawing.Image)(resources.GetObject("Item1.Image")));
-            this.Item1.Location = new System.Drawing.Point(431, 25);
-            this.Item1.Name = "Item1";
-            this.Item1.Size = new System.Drawing.Size(42, 44);
-            this.Item1.TabIndex = 4;
-            this.Item1.TabStop = false;
-            this.Item1.Click += new System.EventHandler(this.Item1_Click);
-            // 
-            // Item2
-            // 
-            this.Item2.Image = ((System.Drawing.Image)(resources.GetObject("Item2.Image")));
-            this.Item2.Location = new System.Drawing.Point(488, 25);
-            this.Item2.Name = "Item2";
-            this.Item2.Size = new System.Drawing.Size(42, 44);
-            this.Item2.TabIndex = 5;
-            this.Item2.TabStop = false;
+            this.POV.Image = global::Just_One_More_day.Properties.Resources.Menu1;
+            this.POV.Location = new System.Drawing.Point(3, 3);
+            this.POV.Name = "POV";
+            this.POV.Size = new System.Drawing.Size(610, 278);
+            this.POV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.POV.TabIndex = 0;
+            this.POV.TabStop = false;
             // 
             // Item3
             // 
-            this.Item3.Image = ((System.Drawing.Image)(resources.GetObject("Item3.Image")));
+            this.Item3.Image = global::Just_One_More_day.Properties.Resources.Inventory_slot;
             this.Item3.Location = new System.Drawing.Point(545, 25);
             this.Item3.Name = "Item3";
             this.Item3.Size = new System.Drawing.Size(42, 44);
             this.Item3.TabIndex = 6;
             this.Item3.TabStop = false;
             // 
-            // button1
+            // Item2
             // 
-            this.button1.Location = new System.Drawing.Point(431, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "<---";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Item2.Image = global::Just_One_More_day.Properties.Resources.Inventory_slot;
+            this.Item2.Location = new System.Drawing.Point(488, 25);
+            this.Item2.Name = "Item2";
+            this.Item2.Size = new System.Drawing.Size(42, 44);
+            this.Item2.TabIndex = 5;
+            this.Item2.TabStop = false;
             // 
-            // button2
+            // Item1
             // 
-            this.button2.Location = new System.Drawing.Point(512, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "--->";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Item1.Image = global::Just_One_More_day.Properties.Resources.Inventory_slot;
+            this.Item1.Location = new System.Drawing.Point(431, 25);
+            this.Item1.Name = "Item1";
+            this.Item1.Size = new System.Drawing.Size(42, 44);
+            this.Item1.TabIndex = 4;
+            this.Item1.TabStop = false;
+            this.Item1.Click += new System.EventHandler(this.Item1_Click);
             // 
             // Form1
             // 
@@ -167,11 +166,11 @@ namespace Just_One_More_day
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.POV)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Item1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Item2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.POV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item1)).EndInit();
             this.ResumeLayout(false);
 
         }

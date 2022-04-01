@@ -44,7 +44,7 @@ namespace Just_One_More_day
                     }
                     else if(OknoWyboru.Items[0] == "Restart")
                     {
-                        POV.Image = Properties.Resources.Menu;
+                        POV.Image = Properties.Resources.Menu1;
                         OknoWyboru.SelectedItem = null;
                         OknoWyboru.Items[0] = "Start Game";
                         OknoDialogu.Text = null;

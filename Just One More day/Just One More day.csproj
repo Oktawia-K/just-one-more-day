@@ -95,5 +95,14 @@
   <ItemGroup>
     <None Include="nuke.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\nuke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Inventory slot.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
