@@ -29,19 +29,20 @@ namespace Just_One_More_day
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.POV = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.OknoDialogu = new System.Windows.Forms.RichTextBox();
-            this.OknoWyboru = new System.Windows.Forms.ListBox();
-            this.POV = new System.Windows.Forms.PictureBox();
             this.Item3 = new System.Windows.Forms.PictureBox();
             this.Item2 = new System.Windows.Forms.PictureBox();
             this.Item1 = new System.Windows.Forms.PictureBox();
+            this.OknoDialogu = new System.Windows.Forms.RichTextBox();
+            this.OknoWyboru = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.POV)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item1)).BeginInit();
@@ -62,6 +63,16 @@ namespace Just_One_More_day
             this.tableLayoutPanel1.Size = new System.Drawing.Size(616, 426);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // POV
+            // 
+            this.POV.Image = global::Just_One_More_day.Properties.Resources.Menu1;
+            this.POV.Location = new System.Drawing.Point(3, 3);
+            this.POV.Name = "POV";
+            this.POV.Size = new System.Drawing.Size(610, 278);
+            this.POV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.POV.TabIndex = 0;
+            this.POV.TabStop = false;
             // 
             // panel1
             // 
@@ -95,39 +106,6 @@ namespace Just_One_More_day
             this.button1.Text = "<---";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // OknoDialogu
-            // 
-            this.OknoDialogu.Location = new System.Drawing.Point(132, 3);
-            this.OknoDialogu.Name = "OknoDialogu";
-            this.OknoDialogu.Size = new System.Drawing.Size(283, 136);
-            this.OknoDialogu.TabIndex = 3;
-            this.OknoDialogu.Text = "";
-            // 
-            // OknoWyboru
-            // 
-            this.OknoWyboru.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.OknoWyboru.FormattingEnabled = true;
-            this.OknoWyboru.ItemHeight = 19;
-            this.OknoWyboru.Items.AddRange(new object[] {
-            "Start Game",
-            "Exit Game",
-            "Opcja wyboru"});
-            this.OknoWyboru.Location = new System.Drawing.Point(0, 3);
-            this.OknoWyboru.Name = "OknoWyboru";
-            this.OknoWyboru.Size = new System.Drawing.Size(126, 137);
-            this.OknoWyboru.TabIndex = 2;
-            this.OknoWyboru.SelectedIndexChanged += new System.EventHandler(this.OknoWyboru_SelectedIndexChanged);
-            // 
-            // POV
-            // 
-            this.POV.Image = global::Just_One_More_day.Properties.Resources.Menu1;
-            this.POV.Location = new System.Drawing.Point(3, 3);
-            this.POV.Name = "POV";
-            this.POV.Size = new System.Drawing.Size(610, 278);
-            this.POV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.POV.TabIndex = 0;
-            this.POV.TabStop = false;
-            // 
             // Item3
             // 
             this.Item3.Image = global::Just_One_More_day.Properties.Resources.Inventory_slot;
@@ -156,18 +134,45 @@ namespace Just_One_More_day
             this.Item1.TabStop = false;
             this.Item1.Click += new System.EventHandler(this.Item1_Click);
             // 
+            // OknoDialogu
+            // 
+            this.OknoDialogu.Location = new System.Drawing.Point(132, 3);
+            this.OknoDialogu.Name = "OknoDialogu";
+            this.OknoDialogu.Size = new System.Drawing.Size(283, 136);
+            this.OknoDialogu.TabIndex = 3;
+            this.OknoDialogu.Text = "";
+            // 
+            // OknoWyboru
+            // 
+            this.OknoWyboru.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.OknoWyboru.FormattingEnabled = true;
+            this.OknoWyboru.ItemHeight = 19;
+            this.OknoWyboru.Items.AddRange(new object[] {
+            "Start Game",
+            "Exit Game",
+            "Opcja wyboru"});
+            this.OknoWyboru.Location = new System.Drawing.Point(0, 3);
+            this.OknoWyboru.Name = "OknoWyboru";
+            this.OknoWyboru.Size = new System.Drawing.Size(126, 137);
+            this.OknoWyboru.TabIndex = 2;
+            this.OknoWyboru.SelectedIndexChanged += new System.EventHandler(this.OknoWyboru_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Just One More day";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.POV)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item1)).EndInit();
