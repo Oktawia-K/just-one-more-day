@@ -73,6 +73,7 @@ namespace Just_One_More_day
             this.POV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.POV.TabIndex = 0;
             this.POV.TabStop = false;
+            this.POV.Click += new System.EventHandler(this.POV_Click);
             // 
             // panel1
             // 

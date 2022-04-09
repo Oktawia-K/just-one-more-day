@@ -8,3 +8,14 @@ C:\Users\user\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just On
 C:\Users\user\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.csproj.CoreCompileInputs.cache
 C:\Users\user\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.exe
 C:\Users\user\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.pdb
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\bin\Debug\Just One More day.exe.config
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\bin\Debug\Just One More day.exe
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\bin\Debug\Just One More day.pdb
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.csproj.AssemblyReference.cache
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.csproj.SuggestedBindingRedirects.cache
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just_One_More_day.Form1.resources
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just_One_More_day.Properties.Resources.resources
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.csproj.GenerateResource.cache
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.csproj.CoreCompileInputs.cache
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.exe
+C:\Users\mati1\Source\Repos\just-one-more-day\Just One More day\obj\Debug\Just One More day.pdb

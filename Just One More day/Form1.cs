@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
@@ -13,16 +14,18 @@ namespace Just_One_More_day
 {
     public partial class Form1 : Form
     {
-        Soundtracks bgmusic = new Soundtracks();
+        //Soundtracks bgmusic = new Soundtracks();
         public Form1()
         {
-            InitializeComponent();       
+            InitializeComponent();
+            //OknoDialogu.AppendText(System.IO.Path.GetFullPath(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), @"..\..\Sounds\nuke incoming.wav")));
             Soundtracks.playmusic(0);
         }
 
         public class Soundtracks
         {
-           static string[] ost = new string[] { @"C:\Users\user\source\repos\just-one-more-day\Just One More day\Sounds\menu theme.wav" };
+            static string firstSong = System.IO.Path.GetFullPath(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), @"..\..\Sounds\menu theme.wav"));
+            static string[] ost = new string[1] {firstSong};
          
                 static public void playmusic(int MusicTrack)
                 {
@@ -47,26 +50,26 @@ namespace Just_One_More_day
 
         private void game_start()
         {
-            string SoundFile = @"C:\Users\user\source\repos\just-one-more-day\Just One More day\Sounds\nuke incoming.wav";
+            string SoundFile = System.IO.Path.GetFullPath(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), @"..\..\Sounds\nuke incoming.wav"));
             SoundPlayer splayer = new SoundPlayer(SoundFile);         
 
-            if (OknoWyboru.Items[0] == "Start Game")
+            if ((string)OknoWyboru.Items[0] == "Start Game")
             {
                 OknoDialogu.AppendText("1");
                 POV.Image = Properties.Resources.nuke;
                 OknoWyboru.SelectedItem = null;
                 OknoWyboru.Items[0] = "Restart";
                 Soundtracks.stopmusic();
-                //splayer.Play();              
+                splayer.Play();              
        
             }
-            else if (OknoWyboru.Items[0] == "Restart")
+            else if ((string)OknoWyboru.Items[0] == "Restart")
             {
                 POV.Image = Properties.Resources.Menu1;
                 OknoWyboru.SelectedItem = null;
                 OknoWyboru.Items[0] = "Start Game";
                 OknoDialogu.Text = null;
-                //splayer.Stop();
+                splayer.Stop();
                 Soundtracks.playmusic(0);
             }
         }
@@ -100,6 +103,11 @@ namespace Just_One_More_day
                     break;
 
             }
+        }
+
+        private void POV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
