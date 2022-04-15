@@ -14,15 +14,29 @@ namespace Just_One_More_day
 {
     public partial class Form1 : Form
     {
-        int charIndex = 0;
+        static int charIndex = 0;
+        static int tableindex = 0;
         //Soundtracks bgmusic = new Soundtracks();
+
+        public List<string> ListaWyboru = new List<string>();
+
+        
+
 
         public Form1()
         {
             InitializeComponent();
+            ListaWyboru.Add("");
+            ListaWyboru.Add("Start Game");
+            ListaWyboru.Add("Exit Game");
+            ListaWyboru.Add("");
+            OknoWyboru.DataSource = ListaWyboru;
+            OknoWyboru.SelectedIndex = -1;          
             //OknoDialogu.AppendText(System.IO.Path.GetFullPath(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), @"..\..\Sounds\nuke incoming.wav")));
             Soundtracks.playmusic(0);
         }
+
+
 
         public class Soundtracks
         {
@@ -35,33 +49,52 @@ namespace Just_One_More_day
                   musicplayer.PlayLooping();
                 }
 
-            static public void stopmusic()
-            {
+                static public void stopmusic()
+                {
                 SoundPlayer musicplayer = new SoundPlayer();
                 musicplayer.Stop();
 
-            }
+                }
 
         }
 
-        public class Fabula 
+        public class Fabula
         {
-               public static string prolog = "Hello world!!";
-           
+            static public string[] scenariusz = new string[] { "kill me",
+              "Decydujesz się szybko wstać, wziąć cokolwiek jest pod ręką i szybko pobiec do osiedlowego bunkra Wybierz co chcesz ze sobą zabrać(masz tylko 2 ręce): ",
+                "1) racje żywnościowe" +
+                "\n2) broń" +
+                "\n3) amunicja" +
+                "\n4) mapa" +
+                "\n5) dyplom ukończenia wsb",
+                "cos"
+                                                              }; 
+
         }
 
-        private void Animacjatekstu(string tekst)
+        public void Animacjatekstu()
         {
-            while (charIndex < tekst.Length)
+            string dialog = Fabula.scenariusz[tableindex];
+            while (charIndex < dialog.Length)
             {
-                Thread.Sleep(35);
+                Thread.Sleep(25);
                 OknoDialogu.Invoke(new Action(() =>
                 {
-                    OknoDialogu.Text += tekst[charIndex];
+                    OknoDialogu.Text += dialog[charIndex];
                 }));
                 charIndex++;
             }
         }
+
+        public void wyswietltekst()
+        {
+            charIndex = 0;
+            OknoDialogu.Text = string.Empty;
+            Thread t = new Thread(new ThreadStart(this.Animacjatekstu));
+            t.Start();
+        }
+
+      
 
         private void game_start()
         {
@@ -70,18 +103,17 @@ namespace Just_One_More_day
 
             if ((string)OknoWyboru.Items[0] == "Start Game")
             {
-                charIndex = 0;
-                OknoDialogu.Text = string.Empty;
-                Thread t = new Thread(new ThreadStart(this.Animacjatekstu(Fabula.prolog)));
-                t.Start();
-
+                tableindex = 0;
+                //wyswietltekst();
+                OknoDialogu.Text = OknoWyboru.SelectedIndex.ToString();
                 POV.Image = Properties.Resources.nuke;
                 OknoWyboru.SelectedItem = null;
-                OknoWyboru.Items[0] = "Restart";
+                ListaWyboru.RemoveAt(0);
+                ListaWyboru.Insert(0, "Restart");
                 Soundtracks.stopmusic();
-                //splayer.Play();              
-       
+                //splayer.Play();                    
             }
+
             else if ((string)OknoWyboru.Items[0] == "Restart")
             {
                 POV.Image = Properties.Resources.Menu1;
@@ -109,22 +141,31 @@ namespace Just_One_More_day
 
         private void OknoWyboru_SelectedIndexChanged(object sender, EventArgs e)
         {
+            OknoDialogu.Text = OknoWyboru.SelectedIndex.ToString();
             switch (OknoWyboru.SelectedIndex)
             {
                 case 0:
                     game_start();
                     break;
-                case 1:
+                case 2:
                     this.Close();
                     break;
-                case 2:
-                    OknoDialogu.AppendText("\n3");
+                case 3:
+                    OknoDialogu.Text = null;
+                    OknoWyboru.SelectedItem = null;
+                    tableindex += 1;
+                    wyswietltekst();
                     break;
 
             }
         }
 
         private void POV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OknoDialogu_TextChanged(object sender, EventArgs e)
         {
 
         }

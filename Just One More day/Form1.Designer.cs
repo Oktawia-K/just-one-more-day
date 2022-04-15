@@ -142,16 +142,13 @@ namespace Just_One_More_day
             this.OknoDialogu.Size = new System.Drawing.Size(283, 136);
             this.OknoDialogu.TabIndex = 3;
             this.OknoDialogu.Text = "";
+            this.OknoDialogu.TextChanged += new System.EventHandler(this.OknoDialogu_TextChanged);
             // 
             // OknoWyboru
             // 
             this.OknoWyboru.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.OknoWyboru.FormattingEnabled = true;
             this.OknoWyboru.ItemHeight = 19;
-            this.OknoWyboru.Items.AddRange(new object[] {
-            "Start Game",
-            "Exit Game",
-            "Opcja wyboru"});
             this.OknoWyboru.Location = new System.Drawing.Point(0, 3);
             this.OknoWyboru.Name = "OknoWyboru";
             this.OknoWyboru.Size = new System.Drawing.Size(126, 137);
